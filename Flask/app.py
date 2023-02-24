@@ -60,9 +60,8 @@ def get_ttl_hash(seconds=600):
 
 
 app = Flask(__name__)
-run_with_ngrok(app)
 app.jinja_env.add_extension('jinja2.ext.loopcontrols')
-
+run_with_ngrok(app)
 
 @app.route("/")
 def index():
